@@ -1,8 +1,7 @@
 import Expenses from './components/Expenses';
-import './Expenses';
 
 function App() {
-  const expenses = [
+  const expense = [
     {
       id: "e1",
       title: "Toilet Paper",
@@ -25,8 +24,13 @@ function App() {
   ];
 
   return (
-    <Expenses>{props}</Expenses>
-  );
+    <div>
+    <h1>Hi</h1>
+    <Expenses title= {expense[0].title} amount= {expense[0].amount} date={expense[0].date}/>
+    <Expenses title= {expense[1].title} amount= {expense[1].amount} date={expense[1].date}/>
+    <Expenses title= {expense[2].title} amount= {expense[2].amount} date={expense[2].date}/>
+    
+    </div>);
 }
 
 export default App;
