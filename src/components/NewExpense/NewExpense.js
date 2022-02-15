@@ -14,14 +14,6 @@ const NewExpense = (props) => {
     props.onAddExpenseHandler(expenseData);
   };
 
-  const openNewExpenseHandler = () => {
-    return (
-      <div className="new-expense">
-        <ExpenseForm onSaveExpenseData={saveExpenseDataHandler}></ExpenseForm>
-      </div>
-    );
-  };
-
   const startEditingHandler = () => {
     setIsEditing(true);
   }
