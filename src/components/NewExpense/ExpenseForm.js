@@ -56,6 +56,7 @@ const ExpenseForm = (props) => {
     // value on the input and so will set the input to
     // clear after a form has been submitted
     props.onSaveExpenseData(expenseData);
+    props.onAddOrCancelExpense();
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
@@ -91,6 +92,9 @@ const ExpenseForm = (props) => {
             value={enteredDate}
             onChange={dateChangeHandler}
           />
+        </div>
+        <div className="new-expense__cancel">
+          <button onClick={props.onAddOrCancelExpense}>Cancel</button>
         </div>
         <div className="new-expense__actions">
           <button type="submit">Add Expense</button>
